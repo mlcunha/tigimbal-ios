@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1
+apiversion: 2
+description: tiGimbal
+author: Stpehen Feather
+license: Apache 2
+copyright: Copyright (c) 2014 by Stephen Feather
+
+
+# these should not be edited
+name: tigimbal
+moduleid: com.stephenfeather.tigimbal
+guid: cc55a178-b122-49fd-a6c0-e6da91fdd6f2
+platform: iphone
+minsdk: 2.1.5
