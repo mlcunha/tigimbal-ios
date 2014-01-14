@@ -2,10 +2,10 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 0.1
+version: 0.1.4
 apiversion: 2
 description: tiGimbal
-author: Stpehen Feather
+author: Stephen Feather
 license: Apache 2
 copyright: Copyright (c) 2014 by Stephen Feather
 
