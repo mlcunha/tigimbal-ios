@@ -1,0 +1,23 @@
+".container": {
+	backgroundColor:"white",
+	layout: "vertical"
+},
+
+".rows":{
+	borderWidth: 1,
+	height: 45,
+	width: Ti.UI.FILL
+}
+".leftAlign":{
+	left: 20
+}
+
+".rightAlign":{
+	right: 20
+}
+"#title": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000",
+	top: 20
+} 

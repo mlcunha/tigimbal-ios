@@ -1,0 +1,17 @@
+<Alloy>
+	<Window class="container">
+		<Label id="title">tiGimbal</Label>
+		<View class="rows">
+			<Button id="init" title="Gimbal Init" onClick="init"/>
+			<Button id="startService" on="false" title="Start Service" onClick="startStopService" class="leftAlign"/>
+			<Button id="startSession" on="false" title="Start Session" class="rightAlign" onClick="startStopSession"/>
+		</View>
+		<View class="rows">
+			<Label id="fileLoggingLabel" class="leftAlign">File Logging</Label>
+			<Switch id="fileLogging" class="rightAlign" onChange="setFileLogging"/>
+		</View>
+		<View class="rows">
+			<Button id="deleteUserData" title="Delete User Data" onClick="deleteVisitsAndSightings"/>
+		</View>
+	</Window>
+</Alloy>
