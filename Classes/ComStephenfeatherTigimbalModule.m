@@ -105,61 +105,62 @@
 	NSString * appSecret = [TiUtils stringValue:@"appSecret" properties:args def:@""];
 	NSString * callbackUrl = [TiUtils stringValue:@"callbackUrl" properties:args def:@""];
     NSLog(@"FYX Init Called");
-	[FYX setAppId:@"your-app-id" appSecret:@"your-app-secret" callbackUrl:@"your://app-url"];
+	[FYX setAppId:setAppId appSecret:appSecret callbackUrl:callbackUrl];
     [FYXLogging setLogLevel:FYX_LOG_LEVEL_VERBOSE];
 }
 
 // startService registers the application with the server and starts bluetooth scanning
--(void)startService
+-(void)startService:(id)args
 {
     NSLog(@"FYX startService Called");
     [FYX startService:self];
 }
 
 // startServiceAndAuthorize registers the application with the server, starts a user session and starts bluetooth scanning
--(void)startServiceAndAuthorize
+-(void)startServiceAndAuthorize:(id)args
 {
     NSLog(@"FYX startServiceAndAuthorize Called");
     [FYX startServiceAndAuthorize:self];
 }
 
 // handleOpenUrl - the url used to reopen the app during the OAuth is handed to this function to complete the OAuth token retrieval
--(bool)handleOpenUrl:(NSURL *)url
+-(void)handleOpenURL:(id)args
 {
+    NSString* jsurl = [TiUtils stringValue:args];
+    NSURL* url = [[NSURL alloc]initWithString:jsurl];
     [FYX handleOpenURL:url];
-    return YES;
 }
 
 // stopService will stop bluetooth scanning.
--(void)stopService
+-(void)stopService:(id)args
 {
     NSLog(@"FYX stopService Called");
     [FYX stopService];
 }
 
 // disableLocationUpdates
--(void)disableLocationUpdates
+-(void)disableLocationUpdates:(id)args
 {
     NSLog(@"FYX disableLocationUpdates Called");
     [FYX disableLocationUpdates];
 }
 
 // enableLocationUpdates
--(void)enableLocationUpdates
+-(void)enableLocationUpdates:(id)args
 {
     NSLog(@"FYX enableLocationUpdates Called");
     [FYX enableLocationUpdates];
 }
 
 // stopServiceAndDeauthorize
--(void)stopServiceAndDeauthorize
+-(void)stopServiceAndDeauthorize:(id)args
 {
     NSLog(@"FYX stopServiceAndDeauthorize Called");
     [FYX stopServiceAndDeauthorize];
 }
 
 // deleteVisitsAndSightings
--(void)deleteVisitsAndSightings
+-(void)deleteVisitsAndSightings:(id)args
 {
     NSLog(@"FYX deleteVisitsAndSightings Called");
     [FYX deleteVisitsAndSightings];
@@ -225,13 +226,13 @@
 
 // TODO: setLogLevel
 
--(void)enableFileLogging
+-(void)enableFileLogging:(id)args
 {
     NSLog(@"FYX Enabling File Logging");
     [FYXLogging enableFileLogging];
 }
 
--(void)disableFileLogging
+-(void)disableFileLogging:(id)args
 {
     NSLog(@"FYX Disabling File Logging");
     [FYXLogging disableFileLogging];
