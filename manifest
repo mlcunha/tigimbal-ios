@@ -2,7 +2,7 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 0.1.4
+version: 0.1.6
 apiversion: 2
 description: tiGimbal
 author: Stephen Feather
@@ -15,4 +15,4 @@ name: tigimbal
 moduleid: com.stephenfeather.tigimbal
 guid: cc55a178-b122-49fd-a6c0-e6da91fdd6f2
 platform: iphone
-minsdk: 2.1.5
+minsdk: 3.2.0
